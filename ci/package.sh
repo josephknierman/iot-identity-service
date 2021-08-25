@@ -52,6 +52,14 @@ case "$OS" in
         popd
 
         make ARCH="$ARCH" PACKAGE_VERSION="$PACKAGE_VERSION" PACKAGE_RELEASE="$PACKAGE_RELEASE" V=1 mrpm
+
+        rm -rf "packages/mariner/$ARCH"
+        mkdir -p "packages/mariner/$ARCH"
+        cp \
+            ~/"CBL-Mariner/out/RPMS/x86_64/aziot-identity-service-$PACKAGE_VERSION-$PACKAGE_RELEASE.x86_64.rpm" \
+            ~/"CBL-Mariner/out/RPMS/x86_64/aziot-identity-service-devel-$PACKAGE_VERSION-$PACKAGE_RELEASE.x86_64.rpm" \
+            ~/"CBL-Mariner/out/SRPMS/aziot-identity-service-$PACKAGE_VERSION-$PACKAGE_RELEASE.src.rpm" \
+            "packages/mariner/$ARCH/"
         ;;
 
     'debian:9'|'debian:10'|'ubuntu:18.04'|'ubuntu:20.04')
