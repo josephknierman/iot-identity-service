@@ -27,7 +27,7 @@ BuildRequires: cmake
 BuildRequires: gcc
 BuildRequires: llvm-devel
 BuildRequires: make
-BuildRequires: openssl-devel=1.1.1k-19.cm2
+BuildRequires: openssl-devel=1.1.1k-17.cm2
 BuildRequires: pkg-config
 BuildRequires: systemd
 BuildRequires: tar
